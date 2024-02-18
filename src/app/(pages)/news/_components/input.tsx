@@ -1,6 +1,6 @@
 import { Input } from "antd";
 import { Loader2, Search } from "lucide-react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function InputSelect({ loading }: { loading: boolean }) {
   const queryParams = new URLSearchParams(location.search);

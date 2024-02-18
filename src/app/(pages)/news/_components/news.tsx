@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Select from "./select";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import GetNews from "@/lib/action";
 import { NewsApiResponse } from "@/lib/interfaces";
-import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ListeNews from "./liste-news";
 import { Button } from "@nextui-org/react";
 import Article from "./article";
