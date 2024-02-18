@@ -10,8 +10,7 @@ export default function Article({
   articles: NewsApiResponse;
   id: string;
 }) {
-  const searchParams = useSearchParams();
-  const queryParams = new URLSearchParams(searchParams?.toString());
+  const queryParams = new URLSearchParams(useSearchParams.toString());
   const router = useRouter();
   const pathname = usePathname();
 

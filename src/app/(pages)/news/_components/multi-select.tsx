@@ -2,7 +2,7 @@
 import { DataItem } from "@/lib/interfaces";
 import { Select, Space } from "antd";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function MultiSelect({
   dataOptions,
@@ -17,7 +17,7 @@ export default function MultiSelect({
   queryParm: string;
   loading: boolean;
 }) {
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(useSearchParams.toString());
   const router = useRouter();
   const pathname = usePathname();
 

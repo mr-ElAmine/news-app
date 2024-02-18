@@ -8,10 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Chip } from "@nextui-org/react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function ItemNews({ article }: { article: Article }) {
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(useSearchParams.toString());
   const router = useRouter();
   const pathname = usePathname();
 

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Select from "./select";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import GetNews from "@/lib/action";
 import { NewsApiResponse } from "@/lib/interfaces";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -21,8 +21,8 @@ export default function News() {
   const router = useRouter();
   const pathname = usePathname();
   const queryParams = useMemo(
-    () => new URLSearchParams(location.search),
-    [location.search]
+    () => new URLSearchParams(useSearchParams.toString()),
+    [useSearchParams.toString()]
   );
 
   const search_query = queryParams.get("q");
