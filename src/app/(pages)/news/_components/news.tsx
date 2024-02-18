@@ -18,12 +18,11 @@ export default function News() {
   const [dataNews, setDataNews] = useState<undefined | NewsApiResponse>(
     undefined
   );
-  const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
   const queryParams = useMemo(
-    () => new URLSearchParams(searchParams?.toString()),
-    [searchParams?.toString()]
+    () => new URLSearchParams(location.search),
+    [location.search]
   );
 
   const search_query = queryParams.get("q");
