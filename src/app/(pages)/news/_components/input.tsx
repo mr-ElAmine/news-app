@@ -4,7 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function InputSelect({ loading }: { loading: boolean }) {
   const searchParams = useSearchParams();
-  const queryParams = new URLSearchParams(searchParams.toString());
+  const queryParams = new URLSearchParams(location.search);
   const router = useRouter();
   const pathname = usePathname();
   const defaultValue = queryParams.get("q");
