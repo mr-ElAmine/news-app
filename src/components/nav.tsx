@@ -22,7 +22,7 @@ export default function NavBar() {
 
   const pages = [
     { route: "/news", name: "News" },
-    { route: "/contact", name: "Contact" },
+    { route: "https://portfolio-app-3j2f.vercel.app/", name: "Contact" },
   ];
 
   return (
