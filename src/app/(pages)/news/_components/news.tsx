@@ -20,9 +20,10 @@ export default function News() {
   );
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const queryParams = useMemo(
-    () => new URLSearchParams(useSearchParams.toString()),
-    [useSearchParams.toString()]
+    () => new URLSearchParams(searchParams?.toString()),
+    [searchParams?.toString()]
   );
 
   const search_query = queryParams.get("q");

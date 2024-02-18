@@ -1,10 +1,10 @@
 import { Input } from "antd";
 import { Loader2, Search } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function InputSelect({ loading }: { loading: boolean }) {
-  const queryParams = new URLSearchParams(location.search);
-  const router = useRouter();
+  const searchParams = useSearchParams();
+  const queryParams = new URLSearchParams(searchParams?.toString());  const router = useRouter();
   const pathname = usePathname();
   const defaultValue = queryParams.get("q");
   const selectDefaultValue = defaultValue ? defaultValue : "";

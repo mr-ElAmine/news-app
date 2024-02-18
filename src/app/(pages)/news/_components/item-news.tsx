@@ -11,7 +11,8 @@ import { Chip } from "@nextui-org/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function ItemNews({ article }: { article: Article }) {
-  const queryParams = new URLSearchParams(useSearchParams.toString());
+  const searchParams = useSearchParams();
+  const queryParams = new URLSearchParams(searchParams?.toString());
   const router = useRouter();
   const pathname = usePathname();
 
